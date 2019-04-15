@@ -6,7 +6,7 @@ export class Dashboard extends Component {
     return (
       <div>
         <h1>Typography</h1>
-        <div className="cover"></div>
+        <div className="cover"><span>span</span></div>
       </div>
     )
   }
