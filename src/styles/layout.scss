@@ -20,14 +20,18 @@
   box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
 }
 
+$light-bg: #f9f9f9;
+$w-80: 80%;
+$w-20: 20%;
+
 .#{$namespace}_navbar{
-  background: #f9f9f9;
+  background: $light-bg ;
   padding: 5px 0px;
   box-shadow: 1px 2px 3px #ccc;
 
   .container{width: 95%;margin: 0 auto;}
-  .nav_left{width:20%;}
-  .nav_right{width:80%; @include flex-end;}
+  .nav_left{width:$w-20;}
+  .nav_right{width:$w-80; @include flex-end;}
   .navcontainer{@include flex-between;}
   .header_search {
     @include align-center;width: 30%;border-bottom: 1px solid #dfe1e5;margin-right:10px;
@@ -74,4 +78,11 @@
 }
 .notify-img:hover + .dropdown-content, .dropdown:hover .dropdown-content{
   display: block;
+}
+
+/*---sidenav----*/
+.#{$namespace}_sidenav{
+  @include flex-between;
+  .box_left{width: $w-20;}
+  .box_right{width: $w-80;}
 }

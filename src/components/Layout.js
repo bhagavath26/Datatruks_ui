@@ -42,6 +42,12 @@ export class Layout extends Component {
                     </div>
                 </div>
             </div>
+            <h1>Sidebar</h1>
+            <hr/>
+            <div className="fi_sidenav">
+                <div className="box_left">l</div>
+                <div className="box_right">r</div>
+            </div>
         </React.Fragment>
     )
   }
