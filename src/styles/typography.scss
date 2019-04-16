@@ -1,0 +1,10 @@
+@import 'global.scss';
+
+@mixin cs-font {
+    font-size: $font-size-x-small;
+}
+
+span.#{$namespace}-span
+{
+    @include cs-font();
+}
