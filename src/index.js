@@ -5,12 +5,14 @@ import './styles/resetStyle.scss';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import FormElements from './components/FormElements';
+import Layout from './components/Layout';
 
 ReactDOM.render(
     <BrowserRouter>
         <React.Fragment>
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/FormElements" component={FormElements} />
+            <Route path="/layout" component={Layout} />
             
         </React.Fragment>
     </BrowserRouter>

@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import '../styles/layout.scss';
+import user from '../images/search.svg';
+import notify from '../images/alarm.svg';
+import avatar from '../images/avatar.svg';
 
 export class Layout extends Component {
   render() {
     return (
-        <React.Fragment>
+        <React.Fragment>            
             <h1>Menu</h1>
             <hr/>
-            <div className="cs_navbar">
+            <div className="fi_navbar">
                 <div class="container">
                     <div className="navcontainer">
                         <div className="nav_left">
@@ -15,10 +18,25 @@ export class Layout extends Component {
                         </div>
                         <div className="nav_right">
                             <div className="header_search">
-                                {/* <img src={require('../images/serach.svg')} /> */}
-                                <input class="input-field" type="text" placeholder="Username" name="usrnm" />
+                                <input class="input-field" type="text" placeholder="Search" name="usrnm" />
+                                <img src={user} />
                             </div>
-                            <div className="header_notification"></div>
+                            <div className="dropdown">
+                            <img className="notify-img" src={notify} />
+                            <div className="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                            </div>
+                            <div className="dropdown profile">
+                            <img className="notify-img" src={avatar} />
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                            </div>
                             <div className="header_profile"></div>
                         </div>
                     </div>
