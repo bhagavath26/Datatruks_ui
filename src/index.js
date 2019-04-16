@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
+import './styles/resetStyle.scss';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import FormElements from './components/FormElements';
