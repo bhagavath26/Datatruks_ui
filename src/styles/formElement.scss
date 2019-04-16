@@ -1,0 +1,221 @@
+.form-md {
+    float: left;
+    margin: 30px 10px 30px 10px;
+  }
+  .form-md .form-group {
+    margin-left: auto;
+    margin-right: auto;
+   
+  }
+  .form-group {
+    margin-bottom: 15px;
+    position: relative;
+    input {
+        position: relative;
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        background-color: transparent;
+        margin: 0px auto;
+        padding: 20px 0px 0px 0px;
+        height: 32px;
+        outline: none !important;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.8);
+        background: -webkit-linear-gradient(bottom, #51bbbe 50%, #51bbbe 50%);
+        background: linear-gradient(to top, #51bbbe 50%, #51bbbe 50%);
+        background-position: left bottom;
+        background-size: 0 1px;
+        background-repeat: no-repeat;
+        transition: all 0.2s ease-in-out;
+      }
+      ::-webkit-input-placeholder {
+        text-align: right;
+        color: #ddd;
+        font-size: 13px;
+        font-weight: 200;
+      }
+      :-moz-placeholder {
+        text-align: right;
+        color: #ddd;
+        font-size: 13px;
+        font-weight: 200;
+      }
+      ::-moz-placeholder {
+        text-align: right;
+        color: #ddd;
+        font-size: 13px;
+        font-weight: 200;
+      }
+      :-ms-input-placeholder {
+        text-align: right;
+        color: #ddd;
+        font-size: 13px;
+        font-weight: 200;
+      }
+      
+      label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: left;
+        display: block;
+        width: 100%;
+        height: 52px;
+        line-height: 72px;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 200;
+        background: transparent;
+        color: rgba(0, 0, 0, 0.6);
+        margin: 0px auto;
+        cursor: text;
+        transition: all 0.15s ease-in-out;
+      }
+      input:hover,
+      input:focus {
+        border-color: #51bbbe;
+      }
+      input:focus {
+        background-position: left bottom;
+        background-size: 100% 1px;
+      }
+      input:valid + label,
+      input:focus + label {
+        height: 20px;
+        line-height: 20px;
+        font-size: 11px;
+        color: #51bbbe;
+      }
+      
+      input:focus ::-webkit-input-placeholder {
+        color: transparent;
+        font-size: 0;
+      }
+      input:focus :-moz-placeholder {
+        color: transparent;
+        font-size: 0;
+      }
+      input:focus ::-moz-placeholder {
+        color: transparent;
+        font-size: 0;
+      }
+      input:focus :-ms-input-placeholder {
+        color: transparent;
+        font-size: 0;
+      }
+  }
+ 
+  .select {
+      position: relative;
+      width: 350px;
+  }
+  
+  .select-text {
+      position: relative;
+      font-family: inherit;
+      background-color: transparent;
+      width: 350px;
+      padding: 10px 10px 10px 0;
+      font-size: 18px;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0, 0.12);
+  }
+  
+  /* Remove focus */
+  .select-text:focus {
+      outline: none;
+      border-bottom: 1px solid rgba(0,0,0, 0);
+  }
+  
+      /* Use custom arrow */
+  .select .select-text {
+      appearance: none;
+      -webkit-appearance:none
+  }
+  
+  .select:after {
+      position: absolute;
+      top: 18px;
+      right: 10px;
+      /* Styling the down arrow */
+      width: 0;
+      height: 0;
+      padding: 0;
+      content: '';
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid rgba(0, 0, 0, 0.12);
+      pointer-events: none;
+  }
+  
+  
+  /* LABEL ======================================= */
+  .select-label {
+      color: rgba(0,0,0, 0.26);
+      font-size: 18px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 0;
+      top: 10px;
+      transition: 0.2s ease all;
+  }
+  
+  /* active state */
+  .select-text:focus ~ .select-label, .select-text:valid ~ .select-label {
+      color: #2F80ED;
+      top: -20px;
+      transition: 0.2s ease all;
+      font-size: 14px;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .select-bar {
+      position: relative;
+      display: block;
+      width: 350px;
+  }
+  
+  .select-bar:before, .select-bar:after {
+      content: '';
+      height: 2px;
+      width: 0;
+      bottom: 1px;
+      position: absolute;
+      background: #2F80ED;
+      transition: 0.2s ease all;
+  }
+  
+  .select-bar:before {
+      left: 50%;
+  }
+  
+  .select-bar:after {
+      right: 50%;
+  }
+  
+  /* active state */
+  .select-text:focus ~ .select-bar:before, .select-text:focus ~ .select-bar:after {
+      width: 50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .select-highlight {
+      position: absolute;
+      height: 60%;
+      width: 100px;
+      top: 25%;
+      left: 0;
+      pointer-events: none;
+      opacity: 0.5;
+  }
+  .error_message
+  {
+    color: red;
+    font-size: 75%;
+    display: flex;
+  }
+  //radio button
