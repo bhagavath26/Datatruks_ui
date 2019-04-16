@@ -29,17 +29,18 @@ export class FormElements extends Component {
               <span class="select-bar"></span>
               <label class="select-label">Select</label>
 			    	</div>
-            <p>
-    <input type="radio" id="test1" name="radio-group" checked/>
-    <label for="test1">Apple</label>
-  </p>
-  <p>
-    <input type="radio" id="test2" name="radio-group"/>
-    <label for="test2">Peach</label>
-  </p>
-          </form>
-      
-      </div>
+    <div class="checkbox">
+      <p>
+        <input type="radio" id="test1" name="radio-group" checked/>
+        <label for="test1">Apple</label>
+      </p>
+      <p>  
+        <input type="radio" id="test2" name="radio-group"/>
+        <label for="test2">Peach</label>
+      </p>
+    </div>  
+  </form>
+</div>
     )
   }
 }
