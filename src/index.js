@@ -6,6 +6,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import FormElements from './components/FormElements';
 import Typography from './components/Typography';
+import Layout from './components/Layout';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -13,6 +14,8 @@ ReactDOM.render(
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/FormElements" component={FormElements} />
             <Route path="/typography" component={Typography} />
+            <Route path="/layout" component={Layout} />
+            
         </React.Fragment>
     </BrowserRouter>
 
