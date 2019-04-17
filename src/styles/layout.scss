@@ -157,7 +157,7 @@ $danger: #721c24;
   &:focus{
     outline:none;
   }
-  .disabled{opacity: 0.5;}
+  &.disabled{opacity: 0.5;}
 }
 
 .#{$namespace}_btnprimary{
