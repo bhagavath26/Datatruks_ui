@@ -1,5 +1,7 @@
 @import 'global.scss';
 
+/*----Mixin------------------*/
+
 @mixin flex-end {
   display:flex;align-items: center;justify-content: flex-end;
 }
@@ -16,9 +18,13 @@
   display: -ms-flexbox;display: flex;align-items: center;
 }
 
+/*----Extend------------------*/
+
 %dropdown-shadow {
   box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
 }
+
+/*----Variable------------------*/
 
 $light-bg: #f9f9f9;
 $w-80: 80%;
@@ -30,7 +36,9 @@ $w-20: 20%;
   box-shadow: 1px 2px 3px #ccc;
 
   .container{width: 95%;margin: 0 auto;}
-  .nav_left{width:$w-20;}
+  .nav_left{width:$w-20;
+    h3{margin-bottom: 0;}
+  }
   .nav_right{width:$w-80; @include flex-end;}
   .navcontainer{@include flex-between;}
   .header_search {
@@ -79,11 +87,27 @@ $w-20: 20%;
 .notify-img:hover + .dropdown-content, .dropdown:hover .dropdown-content{
   display: block;
 }
-.nav_left h3{margin-bottom: 0;}
-
 /*---sidenav----*/
 .#{$namespace}_sidenav{
   @include flex-between;
-  .box_left{width: $w-20;}
+  .box_left{
+    width: $w-20;
+    background: $light-bg;min-height: 500px;
+  }
   .box_right{width: $w-80;}
+  .ul_main{
+    margin:0;
+    li{
+      @include align-center;padding: 10px;border-bottom: 1px solid #ececec;
+      &:hover { 
+        background: #d6d6d6;color: #fff;border-left: 5px solid #5f5d5d;
+      }
+      &.active {background: #d6d6d6;color: #fff;border-left: 5px solid #5f5d5d; }
+      
+      svg{
+        width:30px;margin-right:10px;
+      }
+    }
+  }
 }
+.ul_main li.active svg path,.ul_main li:hover svg path{fill:#fff;}
