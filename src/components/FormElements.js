@@ -29,7 +29,7 @@ export class FormElements extends Component {
               <span class="select-bar"></span>
               <label class="select-label">Select</label>
 			    	</div>
-    <div class="checkbox">
+    <div class="radio_btn">
       <p>
         <input type="radio" id="test1" name="radio-group" checked/>
         <label for="test1">Apple</label>
@@ -39,6 +39,12 @@ export class FormElements extends Component {
         <label for="test2">Peach</label>
       </p>
     </div>  
+<div class="checkbox">
+  <div class="md-checkbox">
+    <input id="i2" type="checkbox" />
+    <label for="i2">Item 1</label>
+  </div>
+</div>
   </form>
 </div>
     )
