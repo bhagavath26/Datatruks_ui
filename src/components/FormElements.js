@@ -3,7 +3,7 @@ import '../styles/formElement.scss';
 export class FormElements extends Component {
   render() {
     return (
-      <div>
+      <div class="flex-center">
          <form class="form-md">
             <div class="form-group">
               <input id="form_name1" class="form-control" type="text" required/>
@@ -17,6 +17,12 @@ export class FormElements extends Component {
               <input id="form_name3" class="form-control" type="text" required/>
               <label for="form_name3">Label</label>
               <span class="error_message">Error Message</span>
+            </div>
+            <div class="text-area">
+            <div class="form-group">
+              <textarea id="message" class="form__field" placeholder="Your Message" rows="6"></textarea>
+              <label for="message" class="form__label">Your Message</label>
+            </div>
             </div>
             <div class="select">
               <select class="select-text" required>
@@ -46,6 +52,30 @@ export class FormElements extends Component {
   </div>
 </div>
   </form>
+<form>
+<ul class="tg-list">
+  <li class="tg-list-item">
+    <input class="tgl tgl-light" id="cb1" type="checkbox"/>
+    <label class="tgl-btn" for="cb1"></label>
+  </li>
+  <li class="tg-list-item">
+    <input class="tgl tgl-ios" id="cb2" type="checkbox"/>
+    <label class="tgl-btn" for="cb2"></label>
+  </li>
+  <li class="tg-list-item">
+    <input class="tgl tgl-skewed" id="cb3" type="checkbox"/>
+    <label class="tgl-btn" data-tg-off="OFF" data-tg-on="ON" for="cb3"></label>
+  </li>
+  <li class="tg-list-item">
+    <input class="tgl tgl-flat" id="cb4" type="checkbox"/>
+    <label class="tgl-btn" for="cb4"></label>
+  </li>
+  <li class="tg-list-item">
+    <input class="tgl tgl-flip" id="cb5" type="checkbox"/>
+    <label class="tgl-btn" data-tg-off="Nope" data-tg-on="Yeah!" for="cb5"></label>
+  </li>
+</ul>
+</form>
 </div>
     )
   }
