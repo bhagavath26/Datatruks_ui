@@ -7,6 +7,25 @@ $font-family: 'Verdana', 'Tahoma', 'Arial', serif;
 $font-size-default: 14px;
 //$font-size-default: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
+
+// Paragraph Styles
+$paragraph-color      : #505050;
+$paragraph-size       : $font-size-default;
+$paragraph-line-height: 1.5em;
+$paragraph-margin     : 20px 0;
+
+// Paragraphs
+p {
+    font-size: $paragraph-size;
+    line-height: $paragraph-line-height;
+    color: $paragraph-color;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+
 .font-size-XXS{
     font-size: $font-size-default / 2;
 }
@@ -28,12 +47,6 @@ $font-size-default: 14px;
 .font-size-XXXXL{
     font-size: $font-size-default * 3;
 }
-
-// Paragraph Styles
-$paragraph-color      : #505050;
-$paragraph-size       : $font-size-default;
-$paragraph-line-height: 1.5em;
-$paragraph-margin     : 20px 0;
 
 // Header Styles
 $header-color      : #2c2c2c;
@@ -98,17 +111,6 @@ $border-color: #DADADA;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-}
-
-// Paragraphs
-p {
-    font-size: $paragraph-size;
-    line-height: $paragraph-line-height;
-    color: $paragraph-color;
-
-    &:last-of-type {
-        margin-bottom: 0;
-    }
 }
 
 // Links
@@ -185,4 +187,44 @@ b,
 
 ul, ol{
 margin: $paragraph-margin;
+}
+
+
+
+// width
+.cs-full-width {
+    width: 100%;
+}
+
+// table
+.cs-table>thead>tr>th, .cs-table>tbody>tr>td {
+    padding: 10px;
+}
+
+.cs-table>tbody>tr>td {
+    color:#555;
+}
+
+.cs-text-left{
+    text-align: left;
+}
+.cs-text-right{
+    text-align: right;
+}
+.cs-text-middle{
+    text-align: middle;
+}
+
+.cs-table-responsive {
+    overflow-x: auto;
+}
+
+$tableBorderColor: #e6e6e6;
+
+.cs-table-border-bottom>thead>tr>th {
+    border-bottom: 4px $tableBorderColor solid;
+}
+
+.cs-table-border-bottom>tbody>tr>td {
+    border-bottom: 1px $tableBorderColor solid;
 }
