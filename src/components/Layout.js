@@ -46,11 +46,7 @@ export class Layout extends Component {
             <hr/>
             <div className="fi_sidenav">
                 <div className="box_left">
-                    <ul>
-                        <li><img src={} /> <span></span></li>
-                        <li><img src={} /> <span></span></li>
-                        <li><img src={} /> <span></span></li>
-                    </ul>
+                    
                 </div>
                 <div className="box_right">r</div>
             </div>
