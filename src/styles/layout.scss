@@ -79,6 +79,7 @@ $w-20: 20%;
 .notify-img:hover + .dropdown-content, .dropdown:hover .dropdown-content{
   display: block;
 }
+.nav_left h1{margin-bottom: 0;}
 
 /*---sidenav----*/
 .#{$namespace}_sidenav{
