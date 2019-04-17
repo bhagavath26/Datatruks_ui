@@ -1,10 +1,9 @@
 @import 'global.scss';
 
-@mixin cs-font {
-    font-size: $font-size-x-small;
+p{
+    margin: $paragraph-margin;
 }
 
-span.#{$namespace}-span
-{
-    @include cs-font();
+.#{$namespace}-cover{
+    padding: 50px;
 }

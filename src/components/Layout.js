@@ -10,11 +10,11 @@ export class Layout extends Component {
         <React.Fragment>            
             <h1>Menu</h1>
             <hr/>
-            <div className="fi_navbar">
+            <div className="cs_navbar">
                 <div class="container">
                     <div className="navcontainer">
                         <div className="nav_left">
-                            <h1>LOGO</h1>
+                            <h3>LOGO</h3>
                         </div>
                         <div className="nav_right">
                             <div className="header_search">
@@ -41,6 +41,14 @@ export class Layout extends Component {
                         </div>
                     </div>
                 </div>
+            </div>
+            <h1>Sidebar</h1>
+            <hr/>
+            <div className="cs_sidenav">
+                <div className="box_left">
+                    
+                </div>
+                <div className="box_right">r</div>
             </div>
         </React.Fragment>
     )
