@@ -14,7 +14,7 @@ export class Layout extends Component {
                 <div class="container">
                     <div className="navcontainer">
                         <div className="nav_left">
-                            <h1>LOGO</h1>
+                            <h3>LOGO</h3>
                         </div>
                         <div className="nav_right">
                             <div className="header_search">
