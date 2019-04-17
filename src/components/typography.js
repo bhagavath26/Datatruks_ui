@@ -30,7 +30,7 @@ export class Dashboard extends Component {
           <a href="#">link</a>
         </div>
         <br></br>
-        <span className="fi-span">I am Span</span>
+        <span className="cs-span">I am Span</span>
         <ul>
           <li>unordered list</li>
           <li>unordered list</li>
@@ -47,6 +47,50 @@ export class Dashboard extends Component {
           <li>ordered list</li>
           <li>ordered list</li>
         </ol>
+        <br></br>
+        <div className="cs-table-responsive">
+          <table className="cs-table cs-full-width cs-table-border-bottom">
+            <thead>
+              <tr className="cs-text-left">
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Table Header</td>
+                <td>Table Header</td>
+                <td>Table Header</td>
+                <td>Table Header</td>
+                <td>Table Header</td>
+              </tr>
+              <tr>
+                <td>Table Header</td>
+                <td>Table Header</td>
+                <td>Table Header</td>
+                <td>Table Header</td>
+                <td>Table Header</td>
+              </tr>
+              <tr>
+                <td>Table Header</td>
+                <td>Table Header</td>
+                <td>Table Header</td>
+                <td>Table Header</td>
+                <td>Table Header</td>
+              </tr>
+              <tr>
+                <td>Table Header</td>
+                <td>Table Header</td>
+                <td>Table Header</td>
+                <td>Table Header</td>
+                <td>Table Header</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     )
   }

@@ -10,7 +10,7 @@ label {position: absolute;top: 0;left: 0;text-align: left;display: block;width: 
 input {
   &:hover {border-color: #000000;}
   &:focus {border-color: #000000;background-position: left bottom;background-size: 100% 1px;}
-  &:valid + label {height: 20px;line-height: 20px;font-size: 11px;color: #000000;}
+  &:valid + label {height: 20px;line-height: 20px;font-size: 13px;color: #000000;}
   &:focus { + label {height: 20px; line-height: 20px;font-size: 11px;color: #000000;}
     ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {color: transparent; font-size: 0;}
   }
@@ -51,6 +51,80 @@ input {
 [type="radio"]:not(:checked) + label:after {opacity: 0;-webkit-transform: scale(0);transform: scale(0);}
 [type="radio"]:checked + label:after {opacity: 1;-webkit-transform: scale(1);transform: scale(1);}
 
-.checkbox {display: flex; margin: 10px 0;
+.radio_btn {display: flex; margin: 10px 0;
   p {margin-right: 15px;}}
 .error_message{color: red;font-size: 75%;display: flex;}
+
+.checkbox{.md-checkbox {
+  position: relative;
+  margin: 1em 0;
+  text-align: left;
+  &.md-checkbox-inline {
+    display: inline-block;
+  }
+  label {
+    cursor: pointer;
+    display: inline;
+    line-height: 1.25em;
+    vertical-align: top;
+    clear: both;
+    padding-left: 1px;
+    &:not(:empty) {
+      padding-left: 1.75em;
+    }
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &:before {
+      width: 1.25em;
+      height: 1.25em;
+      background: #fff;
+      border: 2px solid rgba(0, 0, 0, 0.54);
+      border-radius: 0.125em;
+      cursor: pointer;
+      transition: background .3s;
+    }
+  }
+  input[type="checkbox"] {
+    outline: 0;
+    visibility: hidden;
+    width: 1.25em;
+    margin: 0;
+    display: block;
+    float: left;
+    font-size: inherit;
+    &:checked + label {
+      &:before {
+        background: #000000;
+        border: none;
+      }
+      &:after {
+        transform: translate(0.25em, 0.33654em) rotate(-45deg);
+        width: 0.75em;
+        height: 0.375em;
+        border: 0.125em solid #fff;
+        border-top-style: none;
+        border-right-style: none;
+      }
+    }
+    &:disabled {
+      + label:before {
+        border-color: rgba(0, 0, 0, 0.26);
+      }
+      &:checked + label:before {
+        background: rgba(0, 0, 0, 0.26);
+      }
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+}
