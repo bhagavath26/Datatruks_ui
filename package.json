@@ -4,13 +4,14 @@
   "private": true,
   "dependencies": {
     "node-sass": "^4.11.0",
+    "randomcolor": "^0.5.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^2.1.8"
   },
   "scripts": {
-    "start": "set PORT=3004 && react-scripts start",
+    "start": "set PORT=3006 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

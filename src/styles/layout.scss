@@ -1,5 +1,7 @@
 @import 'global.scss';
 
+/*----Mixin------------------*/
+
 @mixin flex-end {
   display:flex;align-items: center;justify-content: flex-end;
 }
@@ -16,13 +18,29 @@
   display: -ms-flexbox;display: flex;align-items: center;
 }
 
+@mixin flex-row {
+  display: flex;align-items: center;flex-direction: row;
+}
+
+/*----Extend------------------*/
+
 %dropdown-shadow {
   box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
 }
+%card-shadow{
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+/*----Variable------------------*/
 
 $light-bg: #f9f9f9;
 $w-80: 80%;
 $w-20: 20%;
+$primary: #37a3f1;
+$text_color: rgba(0,0,0,.87);
+$success:#155724;
+$warning: #856404;
+$danger: #721c24;
 
 .#{$namespace}_navbar{
   background: $light-bg ;
@@ -30,7 +48,9 @@ $w-20: 20%;
   box-shadow: 1px 2px 3px #ccc;
 
   .container{width: 95%;margin: 0 auto;}
-  .nav_left{width:$w-20;}
+  .nav_left{width:$w-20;
+    h3{margin-bottom: 0;}
+  }
   .nav_right{width:$w-80; @include flex-end;}
   .navcontainer{@include flex-between;}
   .header_search {
@@ -79,11 +99,127 @@ $w-20: 20%;
 .notify-img:hover + .dropdown-content, .dropdown:hover .dropdown-content{
   display: block;
 }
-.nav_left h3{margin-bottom: 0;}
-
 /*---sidenav----*/
 .#{$namespace}_sidenav{
   @include flex-between;
-  .box_left{width: $w-20;}
+  .box_left{
+    width: $w-20;
+    background: $light-bg;min-height: 500px;
+  }
   .box_right{width: $w-80;}
+  .ul_main{
+    margin:0;
+    li{
+      @include align-center;padding: 10px;border-bottom: 1px solid #ececec;
+      &:hover { 
+        background: #d6d6d6;color: #fff;border-left: 5px solid #5f5d5d;
+      }
+      &.active {background: #d6d6d6;color: #fff;border-left: 5px solid #5f5d5d; }
+      
+      svg{
+        width:30px;margin-right:10px;
+      }
+    }
+  }
+}
+.ul_main li.active svg path,.ul_main li:hover svg path{fill:#fff;}
+/*---Toolbar---*/
+.#{$namespace}_toolbar{
+  min-height: 65px;
+  @include flex-row;
+  box-sizing: border-box;
+  padding: 0 16px;
+  width: 100%;
+  white-space: nowrap;
+  background: #f5f5f5;
+  color: $text_color;
+  h5{
+    margin-bottom: 0;
+  }
+}
+/*---Card----*/
+.#{$namespace}_card{
+  .card_box{
+    padding: 16px;@extend %card-shadow;background: #fff;margin:5px;color: $text_color;
+    h5{margin-bottom: 0;}
+  }
+} 
+/*--Button-----*/
+.#{$namespace}_btnbase{
+  min-width: 100px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  box-shadow: none;
+  border: none;
+  height: 35px;
+  margin: 5px;
+  cursor: pointer;
+  &:focus{
+    outline:none;
+  }
+  &.disabled{opacity: 0.5;}
+}
+
+.#{$namespace}_btnprimary{
+  background:$primary;color:#fff;
+  &:hover {
+    background:#1e9af5;
+  }
+  .btn_icn{
+    svg{
+      width:15px;margin-right:10px;
+      path{
+        fill:#fff;
+      }
+    }
+  } 
+}
+
+.#{$namespace}_alertbox{
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  margin-top: 1rem;
+  width:40%;
+  &.success{
+    color: $success;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    h4{
+      color:$success;
+      margin-bottom: 10px;
+    }
+    p{
+      color:$success;
+      margin-top:0;
+    }
+  }
+  &.warning{
+    color: $warning;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    h4{
+      color:$warning;
+      margin-bottom: 10px;
+    }
+    p{
+      color:$warning;
+      margin-top:0;
+    }
+  }
+  &.danger{
+    color: $danger;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    h4{
+      color:$danger;
+      margin-bottom: 10px;
+    }
+    p{
+      color:$danger;
+      margin-top:0;
+    }
+  }
 }
