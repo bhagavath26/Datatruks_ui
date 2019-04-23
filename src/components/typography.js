@@ -61,36 +61,129 @@ export class Dashboard extends Component {
             </thead>
             <tbody>
               <tr>
-                <td>Table Header</td>
-                <td>Table Header</td>
-                <td>Table Header</td>
-                <td>Table Header</td>
-                <td>Table Header</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
               </tr>
               <tr>
-                <td>Table Header</td>
-                <td>Table Header</td>
-                <td>Table Header</td>
-                <td>Table Header</td>
-                <td>Table Header</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
               </tr>
               <tr>
-                <td>Table Header</td>
-                <td>Table Header</td>
-                <td>Table Header</td>
-                <td>Table Header</td>
-                <td>Table Header</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
               </tr>
               <tr>
-                <td>Table Header</td>
-                <td>Table Header</td>
-                <td>Table Header</td>
-                <td>Table Header</td>
-                <td>Table Header</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <br></br><br></br>
+        <div className="cs-table-responsive">
+        <table className="cs-table cs-full-width cs-table-border ">
+            <thead>
+              <tr className="cs-text-left">
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+              </tr>
+              <tr>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+              </tr>
+              <tr>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+              </tr>
+              <tr>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br></br><br></br>
+        <div className="cs-table-responsive">
+        <table className="cs-table cs-full-width cs-table-alternativeBg ">
+            <thead>
+              <tr className="cs-text-left">
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+              </tr>
+              <tr>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+              </tr>
+              <tr>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+              </tr>
+              <tr>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+                <td>Table Content</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br></br>
+        <blockquote>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit ligula non velit dictum rutrum. Pellentesque ullamcorper sit amet ante ullamcorper rhoncus. Pellentesque et turpis massa. Nam non velit sit amet velit pretium condimentum. Nunc ullamcorper commodo arcu in tincidunt. Etiam risus leo, ultrices a molestie eu, dignissim non orci.
+        </blockquote>
+        <br></br><br></br>
       </div>
     )
   }

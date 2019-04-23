@@ -3,7 +3,7 @@ $namespace: "cs";
 
 
 // Font Family
-$font-family: 'Verdana', 'Tahoma', 'Arial', serif;
+$font-family: 'Calibri', 'Verdana', 'Tahoma', 'Arial', serif;
 $font-size-default: 14px;
 //$font-size-default: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
@@ -220,11 +220,22 @@ margin: $paragraph-margin;
 }
 
 $tableBorderColor: #e6e6e6;
+$tableTDBorderWidth: 1px;
 
 .cs-table-border-bottom>thead>tr>th {
     border-bottom: 4px $tableBorderColor solid;
 }
 
 .cs-table-border-bottom>tbody>tr>td {
-    border-bottom: 1px $tableBorderColor solid;
+    border-bottom: $tableTDBorderWidth $tableBorderColor solid;
+}
+.cs-table-border>thead>tr>th, .cs-table-border>tbody>tr>td {
+    border: $tableTDBorderWidth $tableBorderColor solid;
+}
+
+.cs-table-alternativeBg>thead>tr>th {
+    background: #e7e7e7;
+}
+.cs-table-alternativeBg>tbody>tr:nth-child(even)>td {
+    background: #f5f5f5;
 }
