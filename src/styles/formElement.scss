@@ -25,7 +25,8 @@ input {
   &:focus { + label {height: 20px; line-height: 20px;font-size: 13px;color: $dark-bg;}
     ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {color: transparent; font-size: 0;}
   }
- }}
+ }
+}
 }
 //Select
 .#{$namespace}_select {position: relative; width: 350px;
