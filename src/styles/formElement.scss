@@ -8,6 +8,7 @@ $error: red;
 $dark-label: #9b9b9b;
 $transparant: rgba(0, 0, 0, 0);
 .error_message{color: $error;font-size: 75%;display: flex;}
+.flex-center {@include flex-center;flex-direction: column;}
 //input form element
 .#{$namespace}_form_md {float: left;margin: 30px 10px 30px 10px;
   .#{$namespace}_form_group {margin-left: auto;margin-right: auto;margin-bottom: 15px;position: relative;
@@ -107,7 +108,7 @@ li {list-style: none;margin: 0;	padding: 0;}
   &:checked + .#{$namespace}_tgl-btn:after {left: 50%;}
 }
 
-// themes
+// toggle themes
 .#{$namespace}_tgl-light {
 	+ .#{$namespace}_tgl-btn {background: $dark-label;border-radius: 2em;padding: 2px;transition: all .4s ease;
 		&:after {border-radius: 50%;background: $light-bg;transition: all .2s ease;}}
@@ -166,7 +167,8 @@ li {list-style: none;margin: 0;	padding: 0;}
 	}
 }
 }
-.flex-center {@include flex-center;flex-direction: column;}
+
+//textarea
 .#{$namespace}_text_area{
 .form__field {font-family: inherit;width: 100%;border: 0;border-bottom: 1px solid $dark-label;outline: 0;padding: 20px 0;background: transparent;transition: border-color 0.2s;
   &::placeholder {color: transparent;}
