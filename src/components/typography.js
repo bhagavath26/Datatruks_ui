@@ -183,7 +183,7 @@ export class Dashboard extends Component {
         <blockquote>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit ligula non velit dictum rutrum. Pellentesque ullamcorper sit amet ante ullamcorper rhoncus. Pellentesque et turpis massa. Nam non velit sit amet velit pretium condimentum. Nunc ullamcorper commodo arcu in tincidunt. Etiam risus leo, ultrices a molestie eu, dignissim non orci.
         </blockquote>
-        <br></br>
+        <br></br></br>
       </div>
     )
   }
