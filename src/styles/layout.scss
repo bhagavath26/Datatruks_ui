@@ -32,21 +32,26 @@
 }
 
 /*----Variable------------------*/
-
-$light-bg: #f9f9f9;
+$colors: (
+  light-bg: #f9f9f9,
+  primary: #37a3f1,
+  text_color: rgba(0,0,0,.87),
+  success:#155724,
+  warning: #856404,
+  danger: #721c24,
+  menuborder: #5f5d5d
+);
 $w-80: 80%;
 $w-20: 20%;
-$primary: #37a3f1;
-$text_color: rgba(0,0,0,.87);
-$success:#155724;
-$warning: #856404;
-$danger: #721c24;
-$menuborder: #5f5d5d;
+/*------Functions----------------*/
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
 
-.#{$namespace}_navbar{
-  background: $light-bg ;
+.#{$namespace}_navbar{  
   padding: 5px 0px;
   box-shadow: 1px 2px 3px #ccc;
+  background:color(light-bg);
 
   .container{width: 95%;margin: 0 auto;}
   .nav_left{width:$w-20;
@@ -105,7 +110,7 @@ $menuborder: #5f5d5d;
   @include flex-between;
   .box_left{
     width: $w-20;
-    background: $light-bg;min-height: 500px;
+    background: color(light-bg);min-height: 500px;
   }
   .box_right{width: $w-80;}
   .ul_main{
@@ -113,9 +118,9 @@ $menuborder: #5f5d5d;
     li{
       @include align-center;padding: 10px;border-bottom: 1px solid #ececec;
       &:hover { 
-        background: #d6d6d6;color: #fff;border-left: 5px solid rgba($menuborder, .9 );
+        background: #d6d6d6;color: #fff;border-left: 5px solid rgba(color(menuborder), .9 );
       }
-      &.active {background: #d6d6d6;color: #fff;border-left: 5px solid rgba($menuborder, .9 ); }
+      &.active {background: #d6d6d6;color: #fff;border-left: 5px solid rgba(color(menuborder), .9 ); }
       
       svg{
         width:30px;margin-right:10px;
@@ -133,7 +138,7 @@ $menuborder: #5f5d5d;
   width: 100%;
   white-space: nowrap;
   background: #f5f5f5;
-  color: $text_color;
+  color: color(text_color);
   h5{
     margin-bottom: 0;
   }
@@ -141,7 +146,7 @@ $menuborder: #5f5d5d;
 /*---Card----*/
 .#{$namespace}_card{
   .card_box{
-    padding: 16px;@extend %card-shadow;background: #fff;margin:5px;color: $text_color;
+    padding: 16px;@extend %card-shadow;background: #fff;margin:5px;color: color(text_color);
     h5{margin-bottom: 0;}
   }
 } 
@@ -164,7 +169,7 @@ $menuborder: #5f5d5d;
 }
 
 .#{$namespace}_btnprimary{
-  background:$primary;color:#fff;
+  background:color(primary);color:#fff;
   &:hover {
     background:#1e9af5;
   }
@@ -187,41 +192,41 @@ $menuborder: #5f5d5d;
   margin-top: 1rem;
   width:40%;
   &.success{
-    color: $success;
+    color: color(success);
     background-color: #d4edda;
     border-color: #c3e6cb;
     h4{
-      color:$success;
+      color:color(success);
       margin-bottom: 10px;
     }
     p{
-      color:$success;
+      color:color(success);
       margin-top:0;
     }
   }
   &.warning{
-    color: $warning;
+    color: color(warning);
     background-color: #fff3cd;
     border-color: #ffeeba;
     h4{
-      color:$warning;
+      color:color(warning);
       margin-bottom: 10px;
     }
     p{
-      color:$warning;
+      color:color(warning);
       margin-top:0;
     }
   }
   &.danger{
-    color: $danger;
+    color: color(danger);
     background-color: #f8d7da;
     border-color: #f5c6cb;
     h4{
-      color:$danger;
+      color:color(danger);
       margin-bottom: 10px;
     }
     p{
-      color:$danger;
+      color:color(danger);
       margin-top:0;
     }
   }
