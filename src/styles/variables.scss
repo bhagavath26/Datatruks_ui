@@ -1,0 +1,23 @@
+/*----Variable------------------*/
+$colors: (
+  light-bg: #f9f9f9,
+  primary: #37a3f1,
+  text_color: rgba(0,0,0,.87),
+  success:#155724,
+  warning: #856404,
+  danger: #721c24,
+  menuborder: #5f5d5d
+);
+
+$dark-bg:black;
+$error: red;
+$dark-label: #9b9b9b;
+$transparant: rgba(0, 0, 0, 0);
+
+$class-slug: w;
+
+@for $i from 1 through 100 {
+  .#{$class-slug}-#{$i}{
+    width: 0% + $i
+  }
+}

@@ -1,26 +1,16 @@
-@import 'global.scss';
+@import 'global';
+@import 'variables';
+@import 'mixins';
+@import '../library/padding';
+@import '../library/margin';
+@import '../library/size';
+@import '../library/position';
+@import '../utilities/directional-property';
+@import '../utilities/compact-shorthand';
+@import '../utilities/unpack-shorthand';
 
-/*----Mixin------------------*/
 
-@mixin flex-end {
-  display:flex;align-items: center;justify-content: flex-end;
-}
 
-@mixin flex-between {
-  display:flex;align-items: center;justify-content: space-between;
-}
-
-@mixin flex-center {
-  display:flex;align-items: center;justify-content: center;
-}
-
-@mixin align-center {
-  display: -ms-flexbox;display: flex;align-items: center;
-}
-
-@mixin flex-row {
-  display: flex;align-items: center;flex-direction: row;
-}
 
 /*----Extend------------------*/
 
@@ -31,38 +21,28 @@
   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
 }
 
-/*----Variable------------------*/
-$colors: (
-  light-bg: #f9f9f9,
-  primary: #37a3f1,
-  text_color: rgba(0,0,0,.87),
-  success:#155724,
-  warning: #856404,
-  danger: #721c24,
-  menuborder: #5f5d5d
-);
-$w-80: 80%;
-$w-20: 20%;
+
 /*------Functions----------------*/
 @function color($color-name) {
   @return map-get($colors, $color-name)
 }
 
-.#{$namespace}_navbar{  
-  padding: 5px 0px;
+.#{$namespace}_navbar{ 
+  @include padding(5px 0px);
+  //padding: 5px 0px;
   box-shadow: 1px 2px 3px #ccc;
   background:color(light-bg);
 
-  .container{width: 95%;margin: 0 auto;}
-  .nav_left{width:$w-20;
-    h3{margin-bottom: 0;}
+  .container{@include margin(null auto);}
+  .nav_left{
+    h3{@include margin(null null 0 null);}
   }
-  .nav_right{width:$w-80; @include flex-end;}
+  .nav_right{@include flex-end;}
   .navcontainer{@include flex-between;}
   .header_search {
-    @include align-center;width: 30%;border-bottom: 1px solid #dfe1e5;margin-right:10px;
+    @include align-center;border-bottom: 1px solid #dfe1e5;@include margin(null 10px null null);
 
-        img{width: 20px;}
+        img{@include size(20px, null);}
         .input-field{border: none;height: 35px;color: #6f6d6d;width:100%;background: transparent;
           &:focus{
             outline:none;
@@ -70,26 +50,24 @@ $w-20: 20%;
         }
       }
 
-      .notify-img{width: 25px;}
+      .notify-img{@include size(25px, null);}
       .dropdown {
-        position: relative;
+        @include position(relative, null null null null);
         @include flex-center;
-        width: 50px;
-        height: 50px;
-        margin: 5px;
+        @include size(50px);        
+        margin:5px;
 
       .dropdown-content {
         display: none;
-        position: absolute;
+        @include position(absolute, 95% null null null);
         background-color: #fff;
         min-width: 160px;
         @extend %dropdown-shadow;
         z-index: 1;
-        top:95%;
 
         a {
           color: black;
-          padding: 12px 16px;
+          @include padding(12px 16px);
           text-decoration: none;
           display: block;
 
@@ -108,11 +86,10 @@ $w-20: 20%;
 /*---sidenav----*/
 .#{$namespace}_sidenav{
   @include flex-between;
-  .box_left{
-    width: $w-20;
+  .box_left{    
     background: color(light-bg);min-height: 500px;
   }
-  .box_right{width: $w-80;}
+  
   .ul_main{
     margin:0;
     li{
@@ -123,7 +100,8 @@ $w-20: 20%;
       &.active {background: #d6d6d6;color: #fff;border-left: 5px solid rgba(color(menuborder), .9 ); }
       
       svg{
-        width:30px;margin-right:10px;
+        @include size(30px, null);
+        @include margin(null 10px null null);
       }
     }
   }
@@ -134,20 +112,20 @@ $w-20: 20%;
   min-height: 65px;
   @include flex-row;
   box-sizing: border-box;
-  padding: 0 16px;
-  width: 100%;
+  @include padding(0 16px);
+  @include size(100%, null);
   white-space: nowrap;
   background: #f5f5f5;
   color: color(text_color);
   h5{
-    margin-bottom: 0;
+    @include margin(null null 0 null);
   }
 }
 /*---Card----*/
 .#{$namespace}_card{
   .card_box{
     padding: 16px;@extend %card-shadow;background: #fff;margin:5px;color: color(text_color);
-    h5{margin-bottom: 0;}
+    h5{@include margin(null null 0 null);}
   }
 } 
 /*--Button-----*/
@@ -158,7 +136,7 @@ $w-20: 20%;
   margin: 5px;
   cursor: pointer;
   display: inline-block;
-  padding: 13px 19px;
+  @include padding(13px 19px);
   border-radius: 30px;
   -webkit-transition: all .15s ease;
   transition: all .15s ease;
@@ -175,7 +153,8 @@ $w-20: 20%;
   }
   .btn_icn{
     svg{
-      width:15px;margin-right:10px;
+      @include size(15px, null);
+      @include margin(null 10px null null);
       path{
         fill:#fff;
       }
@@ -185,23 +164,22 @@ $w-20: 20%;
 
 .#{$namespace}_alertbox{
   position: relative;
-  padding: .75rem 1.25rem;
-  margin-bottom: 1rem;
+  @include padding(.75rem 1.25rem);
+  @include margin(1rem null 1rem null);
   border: 1px solid transparent;
   border-radius: 15px;
-  margin-top: 1rem;
-  width:40%;
+  @include size(40%, null);
   &.success{
     color: color(success);
     background-color: #d4edda;
     border-color: #c3e6cb;
     h4{
       color:color(success);
-      margin-bottom: 10px;
+      @include margin(null null 10px null);
     }
     p{
       color:color(success);
-      margin-top:0;
+      @include margin(0 null null null);
     }
   }
   &.warning{
@@ -210,11 +188,11 @@ $w-20: 20%;
     border-color: #ffeeba;
     h4{
       color:color(warning);
-      margin-bottom: 10px;
+      @include margin(null null 10px null);
     }
     p{
       color:color(warning);
-      margin-top:0;
+      @include margin(0 null null null);
     }
   }
   &.danger{
@@ -223,11 +201,11 @@ $w-20: 20%;
     border-color: #f5c6cb;
     h4{
       color:color(danger);
-      margin-bottom: 10px;
+      @include margin(null null 10px null);
     }
     p{
       color:color(danger);
-      margin-top:0;
+      @include margin(0 null null null);
     }
   }
 }
