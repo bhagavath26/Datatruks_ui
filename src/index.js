@@ -13,7 +13,7 @@ ReactDOM.render(
         <React.Fragment>
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/FormElements" component={FormElements} />
-            <Route path="/typography" component={Typography} />
+            <Route path="/Typography" component={Typography} />
             <Route path="/layout" component={Layout} />
             
         </React.Fragment>
