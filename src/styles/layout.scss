@@ -147,13 +147,15 @@ $danger: #721c24;
 /*--Button-----*/
 .#{$namespace}_btnbase{
   min-width: 100px;
-  padding: 5px 10px;
-  border-radius: 15px;
   box-shadow: none;
   border: none;
-  height: 35px;
   margin: 5px;
   cursor: pointer;
+  display: inline-block;
+  padding: 13px 19px;
+  border-radius: 30px;
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
   &:focus{
     outline:none;
   }
