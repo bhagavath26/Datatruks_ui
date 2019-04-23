@@ -41,6 +41,7 @@ $text_color: rgba(0,0,0,.87);
 $success:#155724;
 $warning: #856404;
 $danger: #721c24;
+$menuborder: #5f5d5d;
 
 .#{$namespace}_navbar{
   background: $light-bg ;
@@ -112,9 +113,9 @@ $danger: #721c24;
     li{
       @include align-center;padding: 10px;border-bottom: 1px solid #ececec;
       &:hover { 
-        background: #d6d6d6;color: #fff;border-left: 5px solid #5f5d5d;
+        background: #d6d6d6;color: #fff;border-left: 5px solid rgba($menuborder, .9 );
       }
-      &.active {background: #d6d6d6;color: #fff;border-left: 5px solid #5f5d5d; }
+      &.active {background: #d6d6d6;color: #fff;border-left: 5px solid rgba($menuborder, .9 ); }
       
       svg{
         width:30px;margin-right:10px;
