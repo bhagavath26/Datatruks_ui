@@ -3,7 +3,7 @@
 
 .#{$namespace}_footer{
     background:color(dark_bg);    
-    position: absolute;
+    position: relative;
     width: 100%;
     bottom: 0;
     a{color:color(white);text-decoration: none;}        
