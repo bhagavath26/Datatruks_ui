@@ -1,3 +1,13 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
 // To replace prefix name
 $namespace: "cs";
 
@@ -6,6 +16,22 @@ $namespace: "cs";
 $font-family: 'Calibri', 'Verdana', 'Tahoma', 'Arial', serif;
 $font-size-default: 14px;
 //$font-size-default: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+// font weight
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-heavy: 700;
+.font-light {
+    font-weight: $font-weight-light;
+  }
+  
+  .font-regular {
+    font-weight: $font-weight-regular;
+  }
+  
+  .font-heavy {
+    font-weight: $font-weight-heavy;
+  }
 
 
 // Paragraph Styles
@@ -180,10 +206,6 @@ i,
     font-style: italic;
 }
 
-strong,
-b,
-.bold {
-}
 
 ul, ol{
 margin: $paragraph-margin;
