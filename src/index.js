@@ -9,6 +9,7 @@ import Typography from './components/Typography';
 import Layout from './components/Layout';
 import Header from './components/Header';
 import Login from './components/Login';
+import SideBar from './components/SideBar';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -19,6 +20,7 @@ ReactDOM.render(
             <Route path="/Typography" component={Typography} />
             <Route path="/layout" component={Layout} />
             <Route path="/Header" component={Header} />
+            <Route path="/SideBar" component={SideBar} />
             
         </React.Fragment>
     </BrowserRouter>
