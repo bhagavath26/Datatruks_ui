@@ -1,0 +1,7 @@
+
+@import 'global';
+@import './layout.scss';
+
+.#{$namespace}_logincontainer{
+    min-height:500px;
+}

@@ -7,20 +7,22 @@ import '../styles/header.scss';
 export class Dashboard extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
+        <div className="cs_nav">
           <div className="row">
             <div className="col-2">
               <a href="#" className="logo">Logo</a>
             </div>
             <div className="col-10">
-                <ul className="headerNav">
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">APIs</a></li>
-                    <li><a href="#">Try Demo</a></li>
-                </ul>
+              <ul className="headernav">
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">APIs</a></li>
+                <li><a href="#">Try Demo</a></li>
+              </ul>
             </div>
           </div>
-      </div>
+        </div>
+      </React.Fragment>
     )
   }
 }

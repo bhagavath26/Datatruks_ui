@@ -1,0 +1,47 @@
+@import 'global';
+@import './layout.scss';
+
+.#{$namespace}_footer{
+    background:color(dark_bg);    
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    a{color:color(white);text-decoration: none;}        
+    .footermenu{
+        @include flex-center;        
+        h3{@include margin(null 10px 0 null);color:color(white);}
+        ul{
+            @include flex-center; 
+            margin:0;
+            li{
+                @include margin(null 10px null null);  
+                a{
+                    &:hover {
+                        color:color(base_color);
+                      }
+                }              
+            }
+        }
+    }
+    .footermail{
+        @include flex-center; 
+        margin-top:7px;
+        a{
+            &:hover {
+                color:color(base_color);
+              }
+        } 
+    }
+    .footercontact{
+        @include flex-center;
+        margin-top:7px;
+        ul{
+            @include flex-center; 
+            margin:0;
+            li{
+                @include margin(null 10px null null);
+                color:color(white);                
+            }
+        }
+    }
+}

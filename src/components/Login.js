@@ -1,11 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import '../styles/login.scss';
 
 export class Login extends Component {
   render() {
     return (
-      <div>
-        <h1>login</h1>
-      </div>
+      <React.Fragment>  
+        <Header />
+        <div className="cs_logincontainer">
+          
+        </div>
+        <Footer />
+      </React.Fragment>  
     )
   }
 }
