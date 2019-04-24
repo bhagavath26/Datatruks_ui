@@ -19,14 +19,14 @@ export class Layout extends Component {
             <h1>Menu</h1>
             <hr/>
             <div className="cs_navbar">
-                <div class="container">
+                <div className="container w-95">
                     <div className="navcontainer">
-                        <div className="nav_left">
+                        <div className="nav_left w-20">
                             <h3>LOGO</h3>
                         </div>
-                        <div className="nav_right">
-                            <div className="header_search">
-                                <input class="input-field" type="text" placeholder="Search" name="usrnm" />
+                        <div className="nav_right w-80">
+                            <div className="header_search w-30">
+                                <input className="input-field" type="text" placeholder="Search" name="usrnm" />
                                 <img src={user} />
                             </div>
                             <div className="dropdown">
@@ -39,7 +39,7 @@ export class Layout extends Component {
                             </div>
                             <div className="dropdown profile">
                             <img className="notify-img" src={avatar} />
-                            <div class="dropdown-content">
+                            <div className="dropdown-content">
                                 <a href="#">Link 1</a>
                                 <a href="#">Link 2</a>
                                 <a href="#">Link 3</a>
@@ -53,14 +53,14 @@ export class Layout extends Component {
             <h1>Sidebar</h1>
             <hr/>
             <div className="cs_sidenav">
-                <div className="box_left">
+                <div className="box_left w-20">
                     <ul className="ul_main">
                         <li className="active"><DashIcn /> <span>Dashboard</span></li>
                         <li> <MessageIcn /><span>Message</span></li>
                         <li> <ElementIcn /><span>UI Elements</span></li>
                     </ul>
                 </div>
-                <div className="box_right"></div>
+                <div className="box_right w-80"></div>
             </div>
             <h1>Toolbar</h1>
             <hr/>

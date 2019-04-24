@@ -8,10 +8,12 @@ import FormElements from './components/FormElements';
 import Typography from './components/Typography';
 import Layout from './components/Layout';
 import Header from './components/Header';
+import Login from './components/Login';
 
 ReactDOM.render(
     <BrowserRouter>
         <React.Fragment>
+            <Route exact path="/" component={Login} />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/FormElements" component={FormElements} />
             <Route path="/Typography" component={Typography} />

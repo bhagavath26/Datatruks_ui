@@ -1,12 +1,9 @@
 @import 'global.scss';
 @import 'layout.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
 
 /*----Mixin------------------*/
-
-$dark-bg:black;
-$error: red;
-$dark-label: #9b9b9b;
-$transparant: rgba(0, 0, 0, 0);
 .error_message{color: $error;font-size: 75%;display: flex;}
 .flex-center {@include flex-center;flex-direction: column;}
 //input form element
