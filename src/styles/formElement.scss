@@ -10,7 +10,7 @@
 .#{$namespace}_form_md {float: left;margin: 30px 10px 30px 10px;
   .#{$namespace}_form_group {margin-left: auto;margin-right: auto;margin-bottom: 15px;position: relative;
     input {position: relative;display: block;width: 100%;border: none;border-bottom: 1px solid $dark-label;
-      background-color: transparent;margin: 0px auto;padding: 20px 0px 0px 0px;height: 32px;outline: none !important;
+      background-color: transparent;margin: 0px auto;padding: 20px 0px 0px 0px;min-height: 32px;outline: none !important;
       font-size: 20px;color: $dark-bg;background: -webkit-linear-gradient(bottom, $dark-bg 50%, $dark-bg 50%);
       background: linear-gradient(to top, $dark-bg 50%, $dark-bg 50%);background-position: left bottom;
       background-size: 0 1px;background-repeat: no-repeat; transition: all .2s ease-in-out;}
